@@ -1,0 +1,85 @@
+React Redux needs React Hooks from newer React versions
+- React 16.8.3 or later
+- React Native 0.59 or later
+
+Overall it has 2 major APIs:
+- Provider (Gives redux store access to the entire app)
+- Hooks (Custom React hooks especially for the redux store)
+
+useSelector reads a value from the store state and subscribes to 
+updates.
+UseDispatch returns the store's dispatch method for state changes.
+
+Redux is a standalone library that works with any UI layer and 
+frameworks.
+- React
+- Angular
+- Vue
+- Ember
+- Vanilla JS
+
+Commonly UI binding libraries bridge the gap between React and Redux
+
+Why use Redux?
+- States are increasingly complex.
+- Logical states include server responses, cached data and 
+locally calculated data.
+- UI states include routes, selected tabs, spinners, pagination
+controls and more.
+- When scope grows, developer slowly loses the capability to
+mentally track how different states interact with each other.
+- Debugging becomes difficult as states are non-deterministic.
+
+Three principles of Redux:
+- Single source of truth.
+    - The global state is stored in an object tree within a single 
+    store.
+
+- State is read-only.
+    - The only way to change the state is to emit an action that 
+    describes what to do. The action is an object.
+
+- Changes are made with pure functions.
+    - To specify how state tree is transformed, we use pure
+    reducers.
+
+When to use Redux?
+- Application states are too numerous.
+- State is updated very frequently.
+- State update logic is complex.
+- Codebase is medium or large-sized with multiple contributors.
+- Need to see how state is being updated over time.
+
+Redux uses React Context API.
+
+By wrapping all the components with Redux provider, it (accidentally)
+solves the unnecessary prop-drills when many components need to
+use a single state.
+
+Redux allows developer to produce applications that
+
+- Persist state to a local storage and then boot up 
+from it, out of the box.
+
+- Pre-fill state on the server, send it to the client in HTML, 
+and boot up from it, out of the box.
+
+- Serialize user actions and attach them, together with a state 
+snapshot, to automated bug reports, so that the product developers 
+can replay them to reproduce the errors.
+
+- Pass action objects over the network to implement collaborative 
+environments without dramatic changes to how the code is written.
+
+- Maintain an undo history or implement optimistic mutations without 
+dramatic changes to how the code is written.
+
+- Travel between the state history in development, and re-evaluate 
+the current state from the action history when the code changes, 
+a la TDD.
+
+- Provide full inspection and control capabilities to the development 
+tooling so that product developers can build custom tools for their 
+apps.
+
+- Provide alternative UIs while reusing most of the business logic.
