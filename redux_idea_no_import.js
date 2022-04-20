@@ -1,4 +1,3 @@
-
 // A redux method of doing state management without
 // importing Redux.
 import React, { Component } from "react";

@@ -1,0 +1,35 @@
+Redux Toolkit provides below basic APIs:
+- configureStore sets up a well-configured Redux store
+with a single function call, including combining reducers,
+adding the thunk middleware, setting up the Redux DevTools
+integration.
+- createSlice to write reducers that uses the Immer library
+to enable writing immutable updates using "mutating" JS
+syntax like state.value = 123, with no spreads needed.
+It also automatically generates action creator functions
+for each reducer, and generates action type strings
+internally based on the reducer names. (Good with TypeScript)
+
+Redux Toolkit provides additional APIs:
+- createAsyncThunk: abstracts the standard "dispatch actions before/after an async request" pattern
+- createEntityAdapter: prebuilt reducers and selectors for CRUD operations on normalized state
+- createSelector: a re-export of the standard Reselect API for memoized selectors
+- createListenerMiddleware: a side effects middleware for running logic in response to dispatched actions
+
+RTK package also includes "RTK Query"
+- A full data fetching and caching solution.
+- Optional @reduxjs/toolkit/query entry point
+- It lets you define endpoints (REST, GraphQL, or any async function), 
+and generates a reducer and middleware that fully manage fetching data, 
+updating loading state, and caching results.
+- It also automatically generates React hooks that can be used in components to fetch data, 
+like const { data, isFetching} = useGetPokemonQuery('pikachu')
+
+Redux Toolkit is created to solve issues that arise from:
+- Accidental state mutation
+- Writing many lines for simple state update
+- Difficulty to trace through codebase
+- Generate action types and action creators
+- Async logic
+- Side effects
+- Data fetching

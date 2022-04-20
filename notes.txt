@@ -8,7 +8,7 @@ Overall it has 2 major APIs:
 
 useSelector reads a value from the store state and subscribes to 
 updates.
-UseDispatch returns the store's dispatch method for state changes.
+useDispatch returns the store's dispatch method for state changes.
 
 Redux is a standalone library that works with any UI layer and 
 frameworks.
@@ -83,3 +83,46 @@ tooling so that product developers can build custom tools for their
 apps.
 
 - Provide alternative UIs while reusing most of the business logic.
+
+What is a reducer?
+- A function that takes a current state value and an action object
+describing "what happened" and returns a new state value.
+
+The signature of a reducer is:
+(state, action) => newState
+ 
+When changing Redux state, should not mutate the state object,
+but return a new object if the state changes.
+	
+Reducer decides how every action transforms the application state.
+
+1 Redux store has 1 reducer, but as the project grows, the root
+reducer can be separated into multiple smaller reducers.
+
+Redux is really:
+- A single store containing "global" state.
+- Dispatching plain object actions to the store when
+something happens in the app
+- Pure reducer functions looking at those actions and
+returning immutably updated state
+
+There are other things accompanying Redux projects:
+- Action creators that generate object actions.
+- Middleware to enable side-effects.
+- Thunk functions that contain sync or async logic
+with side effects.
+- Normalized state to enable looking up items by ID.
+- Memoized selector functions with the Reselect library
+for optimizing derived data.
+- The Redux DevTools Extension to view your action
+history and state changes.
+- TypeScript types for actions, state, and other functions.
+
+Redux core provides below APIs:
+- "createStore" to create a Redux store
+- "combineReducers" to combine multiple slice reducers
+into a single larger reducer
+- "applyMiddleware" to combine multiple middleware into
+a store enhancer
+- "compose" to combine multiple store enhancers into a
+single store enhancer.
