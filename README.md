@@ -15,7 +15,7 @@ Other supporting libraries that help to deal with Redux side effects:
 - Redux-Loop
 
 Very very good articles on Redux:
-https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/
-https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-2/
-https://medium.com/@dan_abramov (Author of React-Redux)
+https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/<br/>
+https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-2/<br/>
+https://medium.com/@dan_abramov (Author of React-Redux)<br/>
 https://overreacted.io/ (Personal blog of React-Redux author)
