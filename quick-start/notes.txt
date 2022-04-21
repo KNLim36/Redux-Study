@@ -1,0 +1,14 @@
+Adding provider to the index.js file in a React project
+makes sure that the store will be available app-wide.
+
+Using "createSlice" API from Redux Toolkit allows us
+to create individual slice reducers, each of them
+in control of its state.
+
+Creating a slice requires a string name, an initial state
+value, and one or more reducer functions to decide how
+the state will change.
+
+Below code is technically a mutation expression, but the
+Immer 
+state.value += 1 (Technically is a )
