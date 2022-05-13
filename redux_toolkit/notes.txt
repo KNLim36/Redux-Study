@@ -33,3 +33,8 @@ Redux Toolkit is created to solve issues that arise from:
 - Async logic
 - Side effects
 - Data fetching
+
+Redux Toolkit is written in TypeScript, its TS type definitions are built-in.
+
+For React Redux, the type definition can be found in @types/react-redux typedefs package on NPM.
+The link is: https://npm.im/@types/react-redux

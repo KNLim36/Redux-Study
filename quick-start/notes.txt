@@ -10,5 +10,14 @@ value, and one or more reducer functions to decide how
 the state will change.
 
 Below code is technically a mutation expression, but the
-Immer 
-state.value += 1 (Technically is a )
+Immer library converts mutating expressions to 
+non-mutating ones, like the example below:
+    state.value += 1
+
+Immer detects changes to a draft state and produces
+a brand new immutable state based on those changes.
+
+The "useSelector" API is used to read data from the store.
+The "useDispatch" API is used to dispatch action objects.
+Both are available in components that are wrapped by
+the provider.
